@@ -1,0 +1,20 @@
+logging:
+  level:
+    root: WARN
+    hm.binkley.labs: INFO
+
+spring:
+  application:
+    name: Bob
+  output:
+    ansi:
+      enabled: always  # Lie because Spring does not grok Cygwin
+
+---
+
+spring:
+  profiles: test
+
+logging:
+  level:
+    hm.binkley.labs: WARN
