@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory.getLogger
 import org.springframework.boot.SpringApplication.run
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.embedded.EmbeddedServletContainerInitializedEvent
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard
 import org.springframework.context.ApplicationListener
 import org.springframework.context.annotation.Bean
 import springfox.documentation.builders.PathSelectors
@@ -16,7 +15,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 
 private val logger = getLogger(Application::class.java)!!
 
-@EnableHystrixDashboard
 @EnableSwagger2
 @SpringBootApplication
 open class Application
