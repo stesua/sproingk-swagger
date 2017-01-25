@@ -1,6 +1,6 @@
 # Sproink
 
-Spring Boot with Kotlin
+Spring Boot with Kotlin and Swagger
 
 This software is in the Public Domain.  Please see [LICENSE.md](LICENSE.md).
 
@@ -8,36 +8,29 @@ This software is in the Public Domain.  Please see [LICENSE.md](LICENSE.md).
 
 Would you like to contribute?  Ask me!  I'm happy to take on contributors or
 pull requests.  Please see the [Story
-Wall](https://github.com/binkley/sproingk/projects/2).
+Wall](https://github.com/binkley/sproingk-swagger/projects/2).
 
 ## Spring features
 
-* Spring 5 M4
-* Actuator
 * Boot with REST
-* Sleuth
-* Unit test with Boot 1.4 features
-* Integration test with Boot 1.4 features
-* Shows git details with actuator `/info` endpoint
 * Example of REST batch round trip with status
+
+## REST doc features
+
+* Swagger 2 and UI with SpringFox
 
 ## Agile features
 
-* [Story wall](https://github.com/binkley/sproingk/projects/2)
-* [CI](https://circleci.com/gh/binkley/sproingk)
+* [CI](https://circleci.com/gh/binkley/sproingk-swagger)
 
 ## Other features
 
-* Latest JUnit 5
-* Access logging ala CLF style
 * Quieter tests and runtime (always in progress!)
 
 ## Things to think about
 
-* Update Spring Boot to 1.5 RC when Sleuth catches up
+* Current SpringFox does not support Spring 5 (and hence, not JUnit 5)
 * Logging is still to noisy during build and tests
-* Some "bleeding edge" difficulties, e.g., Spring REST docs + Spring 5 beta
-* Replace nested tests with scenario tests (see [Introduce first-class support for scenario tests #48](https://github.com/junit-team/junit5/issues/48), pending [5.0 M5](https://github.com/junit-team/junit5/milestone/8) drop of JUnit)
 
 ## Some reading
 
@@ -45,6 +38,6 @@ Wall](https://github.com/binkley/sproingk/projects/2).
 * [Dipping into Spring Boot with Kotlin](https://medium.com/@mchlstckl/dipping-into-spring-boot-with-kotlin-31881edd13c2#.h26gsle9y)
 * [The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class](http://engineering.pivotal.io/post/spring-boot-application-with-kotlin/)
 * [Kotlin extensions for Spring projects](https://github.com/sdeleuze/spring-kotlin)
-* [JUnit 5 with Spring Boot (plus Kotlin)](https://objectpartners.com/2016/07/26/junit-5-with-spring-boot-plus-kotlin/)
-* [Testing improvements in Spring Boot 1.4](https://spring.io/blog/2016/04/15/testing-improvements-in-spring-boot-1-4)
 * [REST and long-running jobs](http://farazdagi.com/blog/2014/rest-long-running-jobs/)
+* [Setting up Swagger 2 with a Spring REST API](http://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
+* [Support for Spring 5](https://github.com/springfox/springfox/issues/1644)
