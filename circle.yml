@@ -1,3 +1,9 @@
 dependencies:
-   override: 
-     - mvn install -DskipTests
+  override:
+    - mvn install -DskipTests
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - mvn boxfuse:run -Dboxfuse.env=prod
