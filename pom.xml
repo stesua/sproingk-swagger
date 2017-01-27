@@ -37,6 +37,7 @@
         <maven-dependency-plugin.version>3.0.0</maven-dependency-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+        <surefire.printSummary>false</surefire.printSummary>
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
         <springfox.version>2.6.1</springfox.version>
