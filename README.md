@@ -31,6 +31,7 @@ Wall](https://github.com/binkley/sproingk-swagger/projects/2).
 
 * Current SpringFox does not support Spring 5 (and hence, not JUnit 5)
 * Logging is still to noisy during build and tests
+* How to use `spring.application.index` to point at `swagger-ui.html'
 
 ## Some reading
 
