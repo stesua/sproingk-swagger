@@ -9,7 +9,7 @@ logging:
 
 spring:
   application:
-    index: "swagger-ui.html"
+    index: "swagger-ui"
     name: Bob
   output:
     ansi:
