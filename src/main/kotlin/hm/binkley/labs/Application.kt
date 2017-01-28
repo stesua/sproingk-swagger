@@ -7,11 +7,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.embedded.EmbeddedServletContainerInitializedEvent
 import org.springframework.context.ApplicationListener
 import org.springframework.context.annotation.Bean
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
 import springfox.documentation.swagger2.annotations.EnableSwagger2
+
 
 private val logger = getLogger(Application::class.java)!!
 
@@ -35,6 +39,25 @@ open class Application
             apis(RequestHandlerSelectors.any()).
             paths(PathSelectors.any()).
             build()!!
+
+    /**
+     * @see <a href="https://springfox.github.io/springfox/docs/current/#q13">Q. How does one configure swagger-ui for non-springboot applications?</a>
+     * @todo This is less than elegant, can it be done better?
+     * */
+    @Bean
+    open fun forwardToIndex(): WebMvcConfigurerAdapter
+            = object : WebMvcConfigurerAdapter() {
+        override fun addViewControllers(registry: ViewControllerRegistry?) {
+            registry!!.addRedirectViewController("/", "/swagger-ui.html")
+        }
+
+        override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
+            registry.addResourceHandler("/swagger-ui.html**").
+                    addResourceLocations("classpath:/META-INF/resources/swagger-ui.html")
+            registry.addResourceHandler("/webjars/**").
+                    addResourceLocations("classpath:/META-INF/resources/webjars/")
+        }
+    }
 }
 
 fun main(args: Array<String>) {
