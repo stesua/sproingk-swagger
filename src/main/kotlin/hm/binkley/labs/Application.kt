@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.embedded.EmbeddedServletContainerInitializedEvent
 import org.springframework.context.ApplicationListener
 import org.springframework.context.annotation.Bean
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import springfox.documentation.builders.PathSelectors
@@ -49,13 +48,6 @@ open class Application
             = object : WebMvcConfigurerAdapter() {
         override fun addViewControllers(registry: ViewControllerRegistry?) {
             registry!!.addRedirectViewController("/", "/swagger-ui.html")
-        }
-
-        override fun addResourceHandlers(registry: ResourceHandlerRegistry) {
-            registry.addResourceHandler("/swagger-ui.html**").
-                    addResourceLocations("classpath:/META-INF/resources/swagger-ui.html")
-            registry.addResourceHandler("/webjars/**").
-                    addResourceLocations("classpath:/META-INF/resources/webjars/")
         }
     }
 }
