@@ -44,8 +44,7 @@ open class Application
      * @todo This is less than elegant, can it be done better?
      * */
     @Bean
-    open fun forwardToIndex(): WebMvcConfigurerAdapter
-            = object : WebMvcConfigurerAdapter() {
+    open fun forwardToIndex() = object : WebMvcConfigurerAdapter() {
         override fun addViewControllers(registry: ViewControllerRegistry?) {
             registry!!.addRedirectViewController("/", "/swagger-ui.html")
         }
