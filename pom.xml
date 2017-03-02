@@ -28,10 +28,10 @@
         <!-- @formatter:off -->
         <boxfuse-maven-plugin.version>1.24.5.1247</boxfuse-maven-plugin.version>
         <generateBackupPoms>false</generateBackupPoms>
-        <jackson-module-kotlin.version>2.8.6</jackson-module-kotlin.version>
+        <jackson-module-kotlin.version>2.8.7</jackson-module-kotlin.version>
         <java.charset>UTF-8</java.charset>
         <java.version>1.8</java.version>
-        <kotlin.version>1.1.0-rc-91</kotlin.version>
+        <kotlin.version>1.1.0</kotlin.version>
         <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.0.0</maven-dependency-plugin.version>
@@ -117,6 +117,7 @@
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <plugins>
+            <!-- TODO: Why do you downgrade so aggressively?
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
@@ -134,6 +135,7 @@
                     </execution>
                 </executions>
             </plugin>
+            -->
             <plugin>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>${maven-clean-plugin.version}</version>
