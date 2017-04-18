@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod.*
 import java.net.URI
 
 @RestController
-open class GreetingController(private val repository: GreetingRepository) {
+class GreetingController(private val repository: GreetingRepository) {
     @RequestMapping("/greetings", method = arrayOf(POST))
     fun beginGreeting(
             @RequestBody greeting: BeginGreeting): ResponseEntity<*> {

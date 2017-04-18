@@ -20,20 +20,20 @@ private val logger = getLogger(Application::class.java)!!
 
 @EnableSwagger2
 @SpringBootApplication
-open class Application
+class Application
     : ApplicationListener<EmbeddedServletContainerInitializedEvent> {
     override fun onApplicationEvent(
             event: EmbeddedServletContainerInitializedEvent) = logger.info(
             "Ready on port ${event.embeddedServletContainer.port}")
 
     @Bean
-    open fun greetingRepository() = SlowGreetingRepository()
+    fun greetingRepository() = SlowGreetingRepository()
 
     @Bean
-    open fun objectMapper() = jacksonObjectMapper()
+    fun objectMapper() = jacksonObjectMapper()
 
     @Bean
-    open fun api() = Docket(DocumentationType.SWAGGER_2).
+    fun api() = Docket(DocumentationType.SWAGGER_2).
             select().
             apis(RequestHandlerSelectors.any()).
             paths(PathSelectors.any()).
@@ -44,7 +44,7 @@ open class Application
      * @todo This is less than elegant, can it be done better?
      * */
     @Bean
-    open fun forwardToIndex() = object : WebMvcConfigurerAdapter() {
+    fun forwardToIndex() = object : WebMvcConfigurerAdapter() {
         override fun addViewControllers(registry: ViewControllerRegistry?) {
             registry!!.addRedirectViewController("/", "/swagger-ui.html")
         }
