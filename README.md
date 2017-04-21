@@ -31,6 +31,8 @@ Wall](https://github.com/binkley/sproingk-swagger/projects/2).
 
 * Current SpringFox does not support Spring 5 (and hence, not JUnit 5)
 * Logging is still to noisy during build and tests
+* Get the integration tests working
+* Add an end-to-end test of the running service in AWS for Circle to use
 
 ## Some reading
 
