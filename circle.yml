@@ -6,4 +6,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - mvn boxfuse:run -Dboxfuse.env=prod
+      - ./mvnw boxfuse:run -Dboxfuse.env=prod
