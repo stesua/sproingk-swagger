@@ -79,6 +79,10 @@
             <url>https://dl.bintray.com/kotlin/kotlin-eap-1.1</url>
         </repository>
         -->
+        <repository>
+            <id>boxfuse-repo</id>
+            <url>https://files.boxfuse.com</url>
+        </repository>
     </repositories>
 
     <pluginRepositories>
