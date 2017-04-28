@@ -1,6 +1,6 @@
 dependencies:
   override:
-      - mvn dependency:go-offline
+      - ./mvnw dependency:go-offline
 
 deployment:
   prod:
