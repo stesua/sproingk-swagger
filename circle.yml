@@ -3,6 +3,8 @@ dependencies:
       - ./mvnw dependency:go-offline
 
 test:
+  override:
+    - ./mvnw clean verify
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
     - find target/{surefire,failsafe}-reports -type f -name TEST\*.xml -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
