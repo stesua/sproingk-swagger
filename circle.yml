@@ -2,6 +2,11 @@ dependencies:
   override:
       - ./mvnw dependency:go-offline
 
+test:
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find target/{surefire,failsafe}-reports -type f -name TEST\*.xml -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+
 deployment:
   prod:
     branch: master
