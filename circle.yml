@@ -14,3 +14,5 @@ deployment:
     branch: master
     commands:
       - ./mvnw boxfuse:run -Dboxfuse.env=prod
+    post:
+      - ./health-check.py
