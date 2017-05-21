@@ -44,7 +44,7 @@
         <surefire.printSummary>false</surefire.printSummary>
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
-        <springfox.version>2.6.1</springfox.version>
+        <springfox.version>2.7.0</springfox.version>
         <versions-maven-plugin.version>2.3</versions-maven-plugin.version>
         <!-- @formatter:on -->
     </properties>
