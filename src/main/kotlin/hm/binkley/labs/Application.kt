@@ -15,7 +15,6 @@ import springfox.documentation.spi.DocumentationType.SWAGGER_2
 import springfox.documentation.spring.web.plugins.Docket
 import springfox.documentation.swagger2.annotations.EnableSwagger2
 
-
 private val logger = getLogger(Application::class.java)!!
 
 @EnableSwagger2
