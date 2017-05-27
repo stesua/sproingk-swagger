@@ -29,18 +29,19 @@
         <!-- @formatter:off -->
         <boxfuse-maven-plugin.version>1.26.1.1297</boxfuse-maven-plugin.version>
         <generateBackupPoms>false</generateBackupPoms>
-        <jackson-module-kotlin.version>2.9.0.pr3</jackson-module-kotlin.version>
+        <jackson.version>2.9.0.pr3</jackson.version>
+        <version.jackson>2.9.0.pr3</version.jackson> <!-- For Jackson -->
         <java.charset>UTF-8</java.charset>
         <java.version>1.8</java.version>
         <junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
         <junit.platform.version>1.0.0-M4</junit.platform.version>
-        <kotlin.version>1.1.4-dev-292</kotlin.version>
+        <kotlin.version>1.1.4-dev-330</kotlin.version>
         <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
-        <maven-dependency-plugin.version>3.0.0</maven-dependency-plugin.version>
+        <maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
-        <spring.version>5.0.0.M5</spring.version>
+        <spring.version>5.0.0.RC1</spring.version>
         <surefire.printSummary>false</surefire.printSummary>
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
@@ -133,7 +134,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-kotlin</artifactId>
-            <version>${jackson-module-kotlin.version}</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
