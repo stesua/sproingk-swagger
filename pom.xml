@@ -30,21 +30,22 @@
         <boxfuse-maven-plugin.version>1.26.1.1297</boxfuse-maven-plugin.version>
         <generateBackupPoms>false</generateBackupPoms>
         <jackson.version>2.9.0.pr3</jackson.version>
-        <version.jackson>2.9.0.pr3</version.jackson> <!-- For Jackson -->
         <java.charset>UTF-8</java.charset>
         <java.version>1.8</java.version>
         <junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
         <junit.platform.version>1.0.0-M4</junit.platform.version>
         <kotlin.version>1.1.4-dev-330</kotlin.version>
+        <version.kotlin>${kotlin.version}</version.kotlin> <!-- Jackson -->
+        <logback-access-spring-boot-starter.version>2.1.0</logback-access-spring-boot-starter.version>
         <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.0.1</maven-dependency-plugin.version>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
         <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
-        <spring.version>5.0.0.RC1</spring.version>
-        <surefire.printSummary>false</surefire.printSummary>
         <project.build.sourceEncoding>${java.charset}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${java.charset}</project.reporting.outputEncoding>
+        <spring.version>5.0.0.RC1</spring.version>
+        <surefire.printSummary>false</surefire.printSummary>
         <springfox.version>2.7.0</springfox.version>
         <versions-maven-plugin.version>2.3</versions-maven-plugin.version>
         <!-- @formatter:on -->
@@ -126,6 +127,12 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
             <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.rakugakibox.spring.boot</groupId>
+            <artifactId>logback-access-spring-boot-starter</artifactId>
+            <version>${logback-access-spring-boot-starter.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
