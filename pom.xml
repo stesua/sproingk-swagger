@@ -319,6 +319,11 @@
                 </configuration>
                 <dependencies>
                     <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>common-java5</artifactId>
+                        <version>${maven-surefire-plugin.version}</version>
+                    </dependency>
+                    <dependency>
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-surefire-provider
                         </artifactId>
