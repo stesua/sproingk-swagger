@@ -8,7 +8,7 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerInitial
 import org.springframework.context.ApplicationListener
 import org.springframework.context.annotation.Bean
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
 import springfox.documentation.spi.DocumentationType.SWAGGER_2
@@ -43,7 +43,7 @@ class Application
      * @todo This is less than elegant, can it be done better?
      * */
     @Bean
-    fun forwardToIndex() = object : WebMvcConfigurerAdapter() {
+    fun forwardToIndex() = object : WebMvcConfigurer {
         override fun addViewControllers(registry: ViewControllerRegistry?) {
             registry!!.addRedirectViewController("/", "/swagger-ui.html")
         }
